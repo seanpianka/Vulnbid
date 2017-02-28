@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	<title>{{ title }} &#8211; VulnBid</title>
+	<link href='//fonts.googleapis.com/css?family=Poppins%3A400%2C700%7CRoboto%3A300%2C400%7CLora%3A400%2C400italic%2C700%2C700italic&#038;subset=latin%2Clatin%2Clatin-ext&#038;ver=4.3.6' id='refur-fonts-css' media='all' rel='stylesheet' type='text/css'>
+	<link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' id='refur-font-awesome-css' media='all' rel='stylesheet' type='text/css'>
+	<link href='/static/css/style.css' id='refur-style-css' media='all' rel='stylesheet' type='text/css'>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js' type='text/javascript'>
+	</script>
+	<script src='//cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js' type='text/javascript'>
+	</script>
+	<style type="text/css">
+	.header-showcase:after {
+	   background: #11366b;
+	   opacity: 0.625;
+	}
+	</style>
+</head>
+<body class="page page-id-2 page-template-default">
+	<div class="hfeed site" id="page">
+		<div class="page-header-wrap">
+			<header class="site-header" id="masthead" role="banner">
+				<div class="header-meta">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-xs-12 pull-right">
+								<div class="follow-list">
+									<div class="follow-list_item">
+										<a class="item-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+									</div>
+									<div class="follow-list_item">
+										<a class="item-twitter" href="https://twitter.com/VulnBid"><i class="fa fa-twitter"></i></a>
+									</div>
+									<div class="follow-list_item">
+										<a class="item-google-plus" href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
+									</div>
+								</div><a class="header-link-acc" href="/my-account/"><i class="fa fa-user"></i></a>
+							</div>
+							<div class="col-md-6 col-sm-6 col-xs-12">
+								<div class="site-description">
+									Vulnerability assessment and bug bounties
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-12 col-xs-12">
+							<div class="site-branding-subpage">
+								<h2 class="site-title"><a class="text-logo" href="/" rel="home">VulnBid</a></h2>
+							</div><!-- .site-branding-subpage -->
+						</div>
+						<div class="col-md-9 col-sm-12 col-xs-12">
+							<nav class="main-navigation" id="site-navigation" role="navigation">
+								<button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle">Menu</button>
+								<div class="menu-menu-1-container">
+									<ul class="menu" id="primary-menu">
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-54" id="menu-item-54">
+											<a href="/">Home</a>
+										</li>
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62" id="menu-item-62">
+											<a href="#">Programs</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63" id="menu-item-63">
+													<a href="/programs/managed">Managed</a>
+												</li>
+												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64" id="menu-item-64">
+													<a href="/programs/unmanaged">Unmanaged</a>
+												</li>
+												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65" id="menu-item-65">
+													<a href="/programs/stage">Stage system</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-149" id="menu-item-149">
+											<a href="#">Resources</a>
+											<ul class="sub-menu">
+												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150" id="menu-item-150">
+													<a href="http://www.hackallthethings.com/">Training</a>
+												</li>
+											</ul>
+										</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61" id="menu-item-61">
+											<a href="/about">About</a>
+										</li>
+										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60 current-menu-item current_page_item" id="menu-item-60">
+											<a href="/signin">Sign In</a>
+										</li>
+									</ul>
+								</div>
+							</nav><!-- #site-navigation -->
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="header-showcase is-subpage"><img alt="VulnBid" class="header-showcase_img" height="734" src="/static/img/circuit-header-dark.png" width="1920"></div>
+		</div>
+		<div class="site-content" id="content">
+			<div class="container">
+				<div class="row">
+					<div class="content-area col-xs-12" id="primary">
+						<main class="site-main" id="main" role="main">
+							<article class="post-2 page type-page status-publish hentry" id="post-2">
+								<header class="entry-header">
+									<h1 class="entry-title">{{ title }}</h1>
+								</header>
+								<div class="entry-content">
+									{% block section %}{% endblock %}
+								</div>
+							</article>
+						</main>
+					</div>
+				</div>
+			</div>
+		</div><!-- #secondary -->
+		<footer class="site-footer" id="colophon" role="contentinfo">
+			<div class="container" style="padding-top: 10px">
+				<div class="row">
+					<div class="footer-logo col-md-4 col-sm-12 col-xs-12">
+						<a class="footer-logo-link" href="/" rel="home">VulnBid</a>
+					</div><!-- .footer-logo -->
+					<div class="site-info col-md-8 col-sm-12 col-xs-12">
+						&copy; 2016 VulnBid Inc.
+					</div><!-- .site-info -->
+				</div>
+			</div>
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+	<script src='//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js' type='text/javascript'>
+	</script> 
+	<script src='/static/js/script.js' type='text/javascript'>
+	</script> 
+</body>
+</html>

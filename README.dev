@@ -1,0 +1,17 @@
+VulnBid frontend
+
+There are two ways to start the webserver:
+* Running ./start.sh starts the uwsgi server, which is our production site. All script and template changes are not immediately reflected in the production site.
+  uwsgi should start on init when the server reboots.
+* Running ./start.sh --debug starts the Flask dev server on port 8080, which helps in staging. All changes are immediately reflected.
+
+DEV NOTE: CAREFUL. JINJA2 IS SUSCEPTIBLE TO REMOTE CODE EXECUTION VIA SSTI ON USER INPUT.
+Can we harden Jinja2?
+
+NICE:
+Potential performance boost if we used optimized FontAwesome? https://github.com/RoelN/Font-Awesome/tree/master/fonts * Problem is, it's not offered on a CDN.
+Should I keep the HTML commented? Or boost performance?
+/static/fonts/ directory even though we have none? (all on CDN)
+
+TODO:
+Set correct current-menu-item current-page-item programmatically

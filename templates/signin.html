@@ -1,0 +1,13 @@
+{% extends "section.html" %}
+{% block section %}
+	<form method="post">
+		<h3>Email:</h3>
+		<input name="email" type="email">
+		<br><br>
+		<h3>Password:</h3>
+		<input name="password" type="password">
+		<br><br>
+		<input type="submit" value="Login">
+	</form>
+	<br>Don't have an account? <a href="/signup">Sign up here.</a>
+{% endblock %}
