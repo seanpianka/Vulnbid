@@ -8,6 +8,8 @@ Specify options for Flask's development server.
 :e-mail: pianka@eml.cc
 
 """
+from datetime import date
+
 from flask import render_template, request
 
 from vulnbid import app
@@ -16,7 +18,8 @@ from vulnbid import app
 @app.context_processor
 def inject_fake_user():
     return {
-        'user': {'nickname': 'Me'}
+        'user': {'nickname': 'Me'},
+        'current_year': date.today().year
     }
 
 
@@ -26,14 +29,14 @@ def index():
     return render_template(
         'index.html',
         title='Home',
-        user=user
     )
 
 
 @app.route('/testing/')
 def testing():
     return render_template(
-        'base/base.html',
+        #'base/wow.html',
+        'base/update/base.html',
         title='Home',
     )
 
