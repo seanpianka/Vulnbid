@@ -15,34 +15,19 @@ from flask import render_template, request
 from vulnbid import app
 
 
-@app.context_processor
-def inject_fake_user():
-    return {
-        'user': {'nickname': 'Me'},
-        'current_year': date.today().year
-    }
-
-
-@app.route('/')
-def index():
-    return render_template(
-        'index.html',
-        title='Home',
-    )
-
-
-@app.route('/about/')
-def about():
+@app.route('/signin/')
+@app.route('/login/')
+def signin():
     return render_template(
         'base/base.html',
         title='Sign In',
     )
 
 
-@app.route('/programs/')
-def programs():
+@app.route('/signup/')
+@app.route('/register/')
+def signup():
     return render_template(
         'base/base.html',
         title='Sign Up',
     )
-

@@ -1,199 +1,127 @@
-<!DOCTYPE html>
-<html lang="en-US">
+{% extends "base/base.html" %}
 
-{% include 'base/header.html' %}
 
-<body class="home blog showcase-active">
-	<div class="hfeed site" id="page">
-		<div class="page-header-wrap">
-			<header class="site-header" id="masthead" role="banner">
-				<div class="header-meta">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12 pull-right">
-								<div class="follow-list">
-									<div class="follow-list_item">
-										<a class="item-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-									</div>
-									<div class="follow-list_item">
-										<a class="item-twitter" href="https://twitter.com/VulnBid"><i class="fa fa-twitter"></i></a>
-									</div>
-									<div class="follow-list_item">
-										<a class="item-google-plus" href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
-									</div>
-								</div><a class="header-link-acc" href="/my-account/"><i class="fa fa-user"></i></a>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="site-description">
-									Vulnerability assessment and bug bounties
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-12 col-xs-12">
-							<div class="site-branding">
-								<h1 class="site-title"><a class="text-logo" href="/" rel="home">VulnBid</a></h1>
-							</div><!-- .site-branding -->
-						</div>
-						<div class="col-md-9 col-sm-12 col-xs-12">
-							<nav class="main-navigation" id="site-navigation" role="navigation">
-								<button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle">Menu</button>
-								<div class="menu-menu-1-container">
-									<ul class="menu" id="primary-menu">
-										<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-54" id="menu-item-54">
-											<a href="/">Home</a>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62" id="menu-item-62">
-											<a href="#">Programs</a>
-											<ul class="sub-menu">
-												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63" id="menu-item-63">
-													<a href="/programs/managed">Managed</a>
-												</li>
-												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64" id="menu-item-64">
-													<a href="/programs/unmanaged">Unmanaged</a>
-												</li>
-												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65" id="menu-item-65">
-													<a href="/programs/stage">Stage system</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-149" id="menu-item-149">
-											<a href="#">Resources</a>
-											<ul class="sub-menu">
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150" id="menu-item-150">
-													<a href="http://www.hackallthethings.com/">Training</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61" id="menu-item-61">
-											<a href="/about">About</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60" id="menu-item-60">
-											<a href="/signin">Sign In</a>
-										</li>
-									</ul>
-								</div>
-							</nav><!-- #site-navigation -->
-						</div>
-					</div>
-				</div>
-			</header><!-- #masthead -->
-			<div class="header-showcase">
-				<div id="jqueryfade"><img id="header_img" alt="VulnBid" class="header-showcase_img" height="734" width="1920" src="/static/img/circuit-header-dark-min.png"></div>
-				<div class="header-showcase_content">
-					<div class="container">
-						<div class="header-showcase_slogan">
-							<div class="header-showcase_title">
-								Secure your network
-							</div>
-							<div class="header-showcase_text">
-								With our community of academic security researchers.
-							</div>
-						</div><a class="header-showcase_btn" href="/signup">Get started</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="featured-content-box">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="featured-box">
-							<div class="featured-box-icon">
-								<img width="100px" height="100px" src="/static/img/betterreports.png">
-							</div>
-							<h3 class="featured-box-title">Better reports</h3>
-							<div class="featured-box-content">
-								See what your surface is. Review in-depth findings from our researchers, which can be imported into standard issue trackers.
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="featured-box">
-							<div class="featured-box-icon">
-								<img width="100px" height="100px" src="/static/img/getpaid.png">
-							</div>
-							<h3 class="featured-box-title">Get paid</h3>
-							<div class="featured-box-content">
-								Be paid for your time.
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-12">
-						<div class="featured-box">
-							<div class="featured-box-icon">
-								<img width="100px" height="100px" src="/static/img/norisk.png">
-							</div>
-							<h3 class="featured-box-title">No risk</h3>
-							<div class="featured-box-content">
-								Our trusted community only uses a single range of IP addresses, so you know if it's us. We can also test stage environments.
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="site-content" id="content">
-			<div class="container">
-				<div class="row">
-					<div class="content-area col-xs-12" id="primary">
-						<main class="site-main" id="main" role="main">
-							<div class="posts-listing">
-                                                                <article class="is-loop post-1 post type-post status-publish format-standard hentry category-uncategorized" id="post-1">
-                                                                        <header class="entry-header">
-                                                                                <center>
-                                                                                        <h1>Why test with us?</h1>
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/PV45BBb9FB0?showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe><br><br>
-                                                                                        <h3>The advantages are clear.</h3>
-                                                                                </center>
-                                                                                <div class="entry-meta"></div>
-                                                                        </header>
-                                                                        <div class="entry-content">
-                                                                                Join our community today.
-                                                                        </div>
-                                                                        <footer class="entry-footer">
-                                                                                <div class="etry-more-btn">
-                                                                                        <a class="read-more" href="/why-vulnbid">Learn More</a>
-                                                                                </div>
-                                                                        </footer>
-                                                                </article>
-							</div>
-						</main><!-- #main -->
-					</div><!-- #primary -->
-				</div>
-			</div>
-		</div><!-- #content -->
-		<div class="widget-area footer-widget-area" id="secondary" role="complementary">
-			<div class="container">
-				<div class="row">
-					<aside class="widget col-sm-12 col-xs-12 col-md-4 widget_text" id="text-2">
-						<h3 class="widget-title">About</h3>
-						<div class="textwidget">
-							VulnBid Inc. was founded by researchers with 30 years of collective experience. We set out to significantly improve bounty platforms for everyone. If you would like to contact us or read more, <a href="/about">click here</a>.
-						</div>
-					</aside>
-				</div>
-			</div>
-		</div><!-- #secondary -->
-		<footer class="site-footer" id="colophon" role="contentinfo">
-			<div class="container" style="padding-top: 10px">
-				<div class="row">
-					<div class="footer-logo col-md-4 col-sm-12 col-xs-12">
-						<a class="footer-logo-link" href="/" rel="home">VulnBid</a>
-					</div><!-- .footer-logo -->
-					<div class="site-info col-md-8 col-sm-12 col-xs-12">
-						&copy; 2016 VulnBid
-					</div><!-- .site-info -->
-				</div>
-			</div>
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
-	<script src='//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js' type='text/javascript'>
-	</script> 
-	<script src='/static/js/script.js' type='text/javascript'>
-	</script> 
-</body>
-</html>
+{% block content %}
+<div class="splash-container">
+    <div class="color-overlay"></div>
+    <div class="splash">
+        <h1 class="splash-head"><span id="splash-title">Secure Your Network</span></h1>
+        <p class="splash-subhead">
+            With our community of academic security researchers.
+        </p>
+        <p>
+            <a href="{{ url_for('signup') }}" class="pure-button pure-button-primary">Get Started</a>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content">
+
+        <h2 class="content-head is-center">Why test with Vulnbid?</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 reason-box" id="reports">
+                <h3 class="content-subhead">
+                    <i class="fa fa-bar-chart-o" aria-hidden="true"></i>
+                    Comprehensive Reports
+                </h3>
+
+                <p>See what your surface is. Review in-depth findings from our researchers, which can be imported into standard issue trackers.</p>
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 reason-box" id="payment">
+                <h3 class="content-subhead">
+                    <i class="fa fa-credit-card"></i>
+                    Guaranteed Payment
+                </h3>
+
+	            <p>No more doubts about being paid for your time. Guaranteed on-time payment for your hard work.</p>
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 reason-box" id="risk">
+                <h3 class="content-subhead">
+                    <i class="fa fa-terminal"></i>
+                    Risk-Free
+                </h3>
+
+                <p>Our trusted community only uses a single range of IP addresses, so you know it's us (optional stage-environment testing available).</p>
+            </div>
+
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 reason-box" id="track">
+                <h3 class="content-subhead">
+                    <i class="fa fa-group"></i>
+                    Proven Track Record
+                </h3>
+
+                <p>VulnBid Inc. was founded by researchers with 30 years of collective experience, set out to improve bug bounty platforms for everyone.</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1 pure-u-lg-3-5">
+        	<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="pure-u-1 pure-u-md-1 pure-u-lg-2-5">
+
+            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor.
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center">Interested? Message the team.</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+                <form class="pure-form pure-form-stacked">
+                    <fieldset>
+
+                        <label for="name">Your Name</label>
+                        <input id="name" type="text" placeholder="Your Name">
+
+
+                        <label for="email">Your Email</label>
+                        <input id="email" type="email" placeholder="Your Email">
+
+                        <label for="password">Your Password</label>
+                        <input id="password" type="password" placeholder="Your Password">
+
+                        <button type="submit" class="pure-button">Sign Up</button>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                <h4>Contact Us</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
+                </p>
+
+                <h4>More Information</h4>
+                <p>
+                	Looking for more? Check out our <a href="{{ url_for('about') }}">about</a> page to read more about the history of VulnBid.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    {% include 'base/footer.html' %}
+
+</div>
+
+{% endblock %}

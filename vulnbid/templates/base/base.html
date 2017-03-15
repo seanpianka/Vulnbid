@@ -1,92 +1,92 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 
-{% include 'base/header.html' %}
 
-<body class="home blog showcase-active">
-	<div class="hfeed site" id="page">
-		<div class="page-header-wrap">
-			<header class="site-header" id="masthead" role="banner">
-				<div class="header-meta">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 col-sm-6 col-xs-12 pull-right">
-								<div class="follow-list">
-									<div class="follow-list_item">
-										<a class="item-facebook" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-									</div>
-									<div class="follow-list_item">
-										<a class="item-twitter" href="https://twitter.com/VulnBid"><i class="fa fa-twitter"></i></a>
-									</div>
-									<div class="follow-list_item">
-										<a class="item-google-plus" href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
-									</div>
-								</div><a class="header-link-acc" href="/my-account/"><i class="fa fa-user"></i></a>
-							</div>
-							<div class="col-md-6 col-sm-6 col-xs-12">
-								<div class="site-description">
-									Vulnerability assessment and bug bounties
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-12 col-xs-12">
-							<div class="site-branding">
-								<h1 class="site-title"><a class="text-logo" href="/" rel="home">VulnBid</a></h1>
-							</div><!-- .site-branding -->
-						</div>
-						<div class="col-md-9 col-sm-12 col-xs-12">
-							<nav class="main-navigation" id="site-navigation" role="navigation">
-								<button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle">Menu</button>
-								<div class="menu-menu-1-container">
-									<ul class="menu" id="primary-menu">
-										<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-54" id="menu-item-54">
-											<a href="/">Home</a>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-62" id="menu-item-62">
-											<a href="#">Programs</a>
-											<ul class="sub-menu">
-												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-63" id="menu-item-63">
-													<a href="/programs/managed">Managed</a>
-												</li>
-												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-64" id="menu-item-64">
-													<a href="/programs/unmanaged">Unmanaged</a>
-												</li>
-												<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-65" id="menu-item-65">
-													<a href="/programs/stage">Stage system</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-149" id="menu-item-149">
-											<a href="#">Resources</a>
-											<ul class="sub-menu">
-												<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150" id="menu-item-150">
-													<a href="http://www.hackallthethings.com/">Training</a>
-												</li>
-											</ul>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61" id="menu-item-61">
-											<a href="/about">About</a>
-										</li>
-										<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60" id="menu-item-60">
-											<a href="/signin">Sign In</a>
-										</li>
-									</ul>
-								</div>
-							</nav><!-- #site-navigation -->
-						</div>
-					</div>
-				</div>
-			</header><!-- #masthead -->
-			<div class="header-showcase">
-				<div id="jqueryfade"><img id="header_img" alt="VulnBid" class="header-showcase_img" height="734" width="1920" src="/static/img/circuit-header-dark-min.png"></div>
-			</div>
-		</div>	
 
-		{% include 'base/footer.html' %}
-	</div>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }} | Vulnbid</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index/marketing-old-ie.css') }}">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index/marketing.css') }}">
+    <!--<![endif]-->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <script type="text/javascript" src="http://updateyourbrowser.net/uyb.js"></script>
+</head>
+
+
+
+<body>
+
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <div class="flexbox-center-container">
+
+            <div class="flexbox-center-item">
+                <a class="pure-menu-heading site-branding" href="{{ url_for('index') }}">
+                    <span class="site-logo">VULNBID</span>
+                </a>
+            </div>
+
+            <div class="flexbox-center-item">
+                <i class="fa fa-facebook social-icon"></i>
+                <i class="fa fa-twitter social-icon"></i>
+                <i class="fa fa-google-plus social-icon"></i>
+            </div>
+
+            <div class="flexbox-center-item">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item pure-menu-selected"><a href="{{ url_for('index') }}" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" class="pure-menu-link">Programs</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Managed</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Unmanaged</a></li>
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Staged</a></li>
+                        </ul>
+                    </li>
+                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                        <a href="#" class="pure-menu-link">Resources</a>
+                        <ul class="pure-menu-children">
+                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Training</a></li>
+                        </ul>
+                    </li>
+                    <li class="pure-menu-item"><a href="{{ url_for('about') }}" class="pure-menu-link">About</a></li>
+                    <li class="pure-menu-item"><a href="{{ url_for('signup') }}" class="pure-menu-link">Sign In</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% block content %}{% endblock %}
+
 </body>
+
+
+<script src="https://purecss.io/js/menus.js"></script>
+
+
 </html>

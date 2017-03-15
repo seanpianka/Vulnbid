@@ -1,8 +1,96 @@
 .splash-container {
-    background: rgb(18, 18, 18);
+    background: url('/static/img/circuit-header-dark.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
-.reason-img {
-	max-width: 64px;
-	max-height: 64px;
+#splash-title {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+}
+
+.color-overlay {
+	background-color: rgba(17,54,107, 0.7);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.reason-box#reports {
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.8)), url('/static/img/reports.png') no-repeat center center;
+    background-size: 128px 128px;
+}
+.reason-box#payment {
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.8)), url('/static/img/payment.png') no-repeat center center;
+    background-size: 128px 128px;
+}
+.reason-box#risk {
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.8)), url('/static/img/risk.png') no-repeat center center;
+    background-size: 128px 128px;
+}
+.reason-box#track {
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.8)), url('/static/img/track.png') no-repeat center center;
+    background-size: 128px 128px;
+}
+
+.social-icon {
+	font-size: 1.5em;
+}
+
+.site-logo {
+	font-family: "Poppins", "Roboto", sans-serif;
+	display: inline-block;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	text-decoration: none;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 5px 10px 5px;
+}
+
+.site-logo:before, .site-logo:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 8px;
+}
+
+.site-logo:before {
+	top: 0;
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+}
+
+.site-logo:after {
+	bottom: 0;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff; 
+}
+
+.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
+	color: #fff;
+}
+
+.flexbox-center-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.flexbox-center-item-top {
+	align-self: flex-start;	
+}
+.flexbox-center-item-bottom {
+	align-self: flex-end;	
+}
+.flexbox-center-item {
+	flex: 1;
 }
