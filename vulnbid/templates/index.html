@@ -5,12 +5,12 @@
 <div class="splash-container">
     <div class="color-overlay"></div>
     <div class="splash">
-        <h1 class="splash-head"><span id="splash-title">Secure Your Network</span></h1>
-        <p class="splash-subhead">
+        <h1 class="splash-head page-load-fadein"><span id="splash-title">Secure Your Network</span></h1>
+        <p class="splash-subhead page-load-fadein">
             With our community of academic security researchers.
         </p>
         <p>
-            <a href="{{ url_for('signup') }}" class="pure-button pure-button-primary">Get Started</a>
+            <a href="{{ url_for('signup') }}" class="pure-button pure-button-primary page-load-fadein">Get Started</a>
         </p>
     </div>
 </div>
@@ -18,7 +18,7 @@
 <div class="content-wrapper">
     <div class="content">
 
-        <h2 class="content-head is-center">Why test with Vulnbid?</h2>
+        <h2 class="content-head is-center" id="why-test-with-vulnbid">Why test with Vulnbid?</h2>
 
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4 reason-box" id="reports">
@@ -80,7 +80,7 @@
     </div>
 
     <div class="content">
-        <h2 class="content-head is-center">Interested? Message the team.</h2>
+        <h2 class="content-head is-center">Interested? Create an account.</h2>
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
@@ -103,17 +103,14 @@
             </div>
 
             <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Us</h4>
+                <h4>Have questions?</h4>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
+                	Head to our <a href="">contact form</a> and leave the team a message.
                 </p>
 
-                <h4>More Information</h4>
+                <h4>Looking for more?</h4>
                 <p>
-                	Looking for more? Check out our <a href="{{ url_for('about') }}">about</a> page to read more about the history of VulnBid.
+                	Check out our <a href="{{ url_for('about') }}">about</a> page to read more about the history of VulnBid and follow us on social media.
                 </p>
             </div>
         </div>

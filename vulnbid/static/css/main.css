@@ -1,3 +1,70 @@
+/* ============================= VulnBid Logo =============================== */
+/* Give VulnBid logo top/bottom white border with center-right/left empty. */
+.site-logo {
+	font-family: "Poppins", "Roboto", sans-serif;
+	display: inline-block;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	text-decoration: none;
+	position: relative;
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 5px 10px 5px;
+}
+/* Overall height of the borders surrounding logo text. */
+.site-logo:before, .site-logo:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 8px;
+}
+/* Add corner and top white borders around logo text. */
+.site-logo:before {
+	top: 0;
+	border-top: 2px solid #fff;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff;
+}
+/* Add corner and top white borders around logo text. */
+.site-logo:after {
+	bottom: 0;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+	border-right: 2px solid #fff; 
+}
+
+
+/* ========================== Page Load Fade-In ============================= */
+/* Forces 3 second fade-in on page-load. */
+.page-load-fadein {
+    animation: 			fadein 2.5s;
+    -moz-animation: 	fadein 2.5s; /* Firefox */
+    -webkit-animation: 	fadein 2.5s; /* Safari and Chrome */
+    -o-animation: 		fadein 2.5s; /* Opera */
+}
+
+@keyframes fadein {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-o-keyframes fadein { /* Opera */
+    from { opacity:0; }
+    to { opacity: 1; }
+}
+
+
+/* ================================ Splash ================================== */
+/* Splash container background, stretched and not repeating. */
 .splash-container {
     background: url('/static/img/circuit-header-dark.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -5,12 +72,12 @@
 	-o-background-size: cover;
 	background-size: cover;
 }
-
+/* Main splash title given original Roboto font. */
 #splash-title {
 	font-family: "Roboto", sans-serif;
 	font-weight: bold;
 }
-
+/* Give splash container background a blue overlay with 70% opacity. */
 .color-overlay {
 	background-color: rgba(17,54,107, 0.7);
 	top: 0;
@@ -19,6 +86,65 @@
 	height: 100%;
 }
 
+
+/* ================================ Splash ================================== */
+/* Change active nav-bar item's font color to white. */
+.pure-menu-selected .pure-menu-link, 
+.pure-menu-selected .pure-menu-link:visited { color: #fff; }
+
+
+/* ============================== Navigation ================================ */
+/* Transition to any change affecting an <a> element. */
+#navbar ul li {
+	background: #2D3E50
+}
+#navbar ul li:hover {
+	background: #3e5670;
+
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+		-ms-transition: all .25s ease;
+		 -o-transition: all .25s ease;
+		    transition: all .25s ease;
+}
+
+#navbar > ul > li:hover > a {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+#navbar > ul > li:hover > a {
+	-webkit-transition: all .25s ease;
+	   -moz-transition: all .25s ease;
+	    -ms-transition: all .25s ease;
+	     -o-transition: all .25s ease;
+	        transition: all .25s ease;
+}
+
+
+/* ========================== Flexbox Alignment ============================= */
+/* Use Flexbox for easy vertical and horizontal alignment. */
+.flexbox-center-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* Pull to top. */
+.flexbox-center-item-top 	{ align-self: flex-start; }
+/* Pull to bottom. */
+.flexbox-center-item-bottom { align-self: flex-end;	}
+/* Pull to Center. */
+.flexbox-center-item 		{ flex: 1; }
+
+
+/* ============================ Content Title =============================== */
+/* Ensures no context text appears when landing page is in full view. */
+#why-test-with-vulnbid {
+	font-size: 1.85em;
+}
+
+
+/* ============================= Reason Boxes =============================== */
+/* Adds original reason icons as transparent, background images behind boxes. */
 .reason-box#reports {
     background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.8)), url('/static/img/reports.png') no-repeat center center;
     background-size: 128px 128px;
@@ -34,63 +160,4 @@
 .reason-box#track {
     background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.8)), url('/static/img/track.png') no-repeat center center;
     background-size: 128px 128px;
-}
-
-.social-icon {
-	font-size: 1.5em;
-}
-
-.site-logo {
-	font-family: "Poppins", "Roboto", sans-serif;
-	display: inline-block;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	text-decoration: none;
-	position: relative;
-	text-align: center;
-	letter-spacing: 1px;
-	padding: 5px 10px 5px;
-}
-
-.site-logo:before, .site-logo:after {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	height: 8px;
-}
-
-.site-logo:before {
-	top: 0;
-	border-top: 2px solid #fff;
-	border-left: 2px solid #fff;
-	border-right: 2px solid #fff;
-}
-
-.site-logo:after {
-	bottom: 0;
-	border-bottom: 2px solid #fff;
-	border-left: 2px solid #fff;
-	border-right: 2px solid #fff; 
-}
-
-.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited {
-	color: #fff;
-}
-
-.flexbox-center-container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.flexbox-center-item-top {
-	align-self: flex-start;	
-}
-.flexbox-center-item-bottom {
-	align-self: flex-end;	
-}
-.flexbox-center-item {
-	flex: 1;
 }
