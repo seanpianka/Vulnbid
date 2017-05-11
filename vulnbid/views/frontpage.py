@@ -1,13 +1,4 @@
-"""
-frontpage/views.py
-~~~~~~~~~~~~~~~~~~
-
-
-:author: Sean Pianka
-:e-mail: pianka@eml.cc
-
-"""
-from flask import render_template, request
+from flask import render_template
 
 from vulnbid import app
 

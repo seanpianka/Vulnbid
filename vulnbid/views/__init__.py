@@ -1,0 +1,1 @@
+from vulnbid.views import auth, frontpage

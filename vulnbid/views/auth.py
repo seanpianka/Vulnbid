@@ -1,19 +1,12 @@
-"""
-auth/views.py
-~~~~~~~~~~~~~
-
-
-:author: Sean Pianka
-:e-mail: pianka@eml.cc
-
-"""
 from datetime import date
 
-from flask import render_template, request
+from flask import render_template, redirect, url_for
 from flask_login import login_user, logout_user, current_user, login_required
 
 from vulnbid import app
-from vulnbid.auth.forms import LoginForm
+from vulnbid.forms import LoginForm
+from vulnbid.utils import hash_password
+from vulnbid.models import User
 
 
 @app.route('/signin/')
@@ -41,6 +34,14 @@ def login():
         form=form,
         title='Sign In',
     )
+
+
+@app.route('/signout/')
+@app.route('/logout/')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 
 @app.route('/signup/')

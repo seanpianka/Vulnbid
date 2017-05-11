@@ -4,83 +4,28 @@
 
 
 <head>
-    <meta charset="utf-8">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ description }}">
-    <title>{{ title }} | Vulnbid</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
-    
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css">
-    <!--<![endif]-->
-    
-    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    
-    <!--[if lte IE 8]>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/index/marketing-old-ie.css') }}">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/index/marketing.css') }}">
-    <!--<![endif]-->
-
-
-    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-
-    <script type="text/javascript" src="http://updateyourbrowser.net/uyb.js"></script>
+    {% include 'base/header.html' %}
+    <!-- CSS includes -->
+    {% block css %}
+    {% endblock %}
 </head>
 
-
-
 <body>
+    <nav>
+        {% include 'base/navbar.html' %}
+    </nav>
 
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <div class="flexbox-center-container">
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
-            <div class="flexbox-center-item">
-                <a class="pure-menu-heading site-branding" href="{{ url_for('index') }}">
-                    <span class="site-logo">VULNBID</span>
-                </a>
-            </div>
-
-            <div class="flexbox-center-item" id="navbar">
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item pure-menu-selected"><a href="{{ url_for('index') }}" class="pure-menu-link">Home</a></li>
-                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" class="pure-menu-link">Programs</a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Managed</a></li>
-                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Unmanaged</a></li>
-                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Staged</a></li>
-                        </ul>
-                    </li>
-                    <li class="pure-menu-item"><a href="{{ url_for('about') }}" class="pure-menu-link">About</a></li>
-                    <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-                        <a href="#" class="pure-menu-link">Resources</a>
-                        <ul class="pure-menu-children">
-                            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Training</a></li>
-                        </ul>
-                    </li>
-                    <li class="pure-menu-item"><a href="{{ url_for('login') }}" class="pure-menu-link">Sign In</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-{% block content %}{% endblock %}
-
+    <!-- Javascript includes -->
+    <script src="https://purecss.io/js/menus.js"></script>
+    {% block javascript %}
+    {% endblock %}
 </body>
 
-
-<script src="https://purecss.io/js/menus.js"></script>
 
 
 </html>

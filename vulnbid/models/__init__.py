@@ -1,0 +1,1 @@
+from vulnbid.models.user import User

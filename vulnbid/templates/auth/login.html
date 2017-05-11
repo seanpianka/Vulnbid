@@ -2,12 +2,46 @@
 
 
 {% block content %}
-<div class="content-wrapper">
-    <div class="content">
-    </div>
+<div id="login-form" class="flexbox-center-container">
+    <form class="pure-form" method="post">
+        {{ form.csrf_token }}
 
-    {% include 'base/footer.html' %}
+        <fieldset>
+            <legend>VulnBid Login</legend>
 
+            <div class="pure-control-group">
+                <label for="name">Username</label>
+                {{ form.username(placeholder="Username",
+               required=form.username.flags.required) }}
+            </div>
+
+            <div class="pure-control-group">
+                <label for="password">Password</label>
+                {{ form.password(placeholder="Password",
+               required=form.password.flags.required) }}
+            </div>
+
+
+            <div class="pure-controls">
+
+                <label for="cb" class="pure-checkbox" >
+                    {{ form.remember_me(class_="pure-checkbox") }}
+                    Remember me
+                </label>
+
+                {{ form.submit(class_="pure-button pure-button-primary") }}
+            </div>
+        </fieldset>
+
+    </form>
 </div>
 
+<div class="flexbox-center-container">
+    <a href="#" id="forgot-password-link">
+        Forgot the password?
+    </a>
+</div>
+
+{% include 'base/footer.html' %}
 {% endblock %}
+

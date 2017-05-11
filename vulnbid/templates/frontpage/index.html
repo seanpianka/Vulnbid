@@ -10,7 +10,7 @@
             With our community of academic security researchers.
         </p>
         <p>
-            <a href="{{ url_for('signup') }}" class="pure-button pure-button-primary page-load-fadein">Get Started</a>
+            <a href="{{ url_for('login') }}" class="pure-button pure-button-primary page-load-fadein">Get Started</a>
         </p>
     </div>
 </div>
@@ -64,7 +64,9 @@
 
     <div class="ribbon l-box-lrg pure-g">
         <div class="l-box-lrg is-center pure-u-1 pure-u-md-1 pure-u-lg-3-5">
-        	<iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+            <div class="video-wrapper">
+                <iframe class="video" width="560" height="315" src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
         <div class="pure-u-1 pure-u-md-1 pure-u-lg-2-5">
 
@@ -121,4 +123,7 @@
 
 </div>
 
+{% endblock %}
+
+{% block javascript %}
 {% endblock %}
