@@ -1,46 +1,101 @@
 {% extends "base/base.html" %}
 
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pages/auth/login.css') }}">
+{% endblock %}
+
 
 {% block content %}
-<div id="login-form" class="flexbox-center-container">
-    <form class="pure-form" method="post">
-        {{ form.csrf_token }}
 
-        <fieldset>
-            <legend>VulnBid Login</legend>
+<div class="pure-g">
 
-            <div class="pure-control-group">
-                <label for="name">Username</label>
-                {{ form.username(placeholder="Username",
-               required=form.username.flags.required) }}
-            </div>
+    <div class="pure-u-sm-1-1 pure-u-md-1-2 auth-form" id="login-form">
+        <form class="pure-form" method="post">
+            {{ form.csrf_token }}
 
-            <div class="pure-control-group">
-                <label for="password">Password</label>
-                {{ form.password(placeholder="Password",
-               required=form.password.flags.required) }}
-            </div>
+            <fieldset>
+                <legend>Login to an existing account:</legend>
+
+                <div class="pure-control-group">
+                    <label for="name">Username</label>
+                    {{ form.username(placeholder="Username",
+       required=form.username.flags.required) }}
+                </div>
+
+                <div class="pure-control-group">
+                    <label for="password">Password</label>
+                    {{ form.password(placeholder="Password",
+       required=form.password.flags.required) }}
+                </div>
 
 
-            <div class="pure-controls">
+                <div class="pure-controls">
+                    <label for="cb" class="pure-checkbox" >
+                        {{ form.remember_me(class_="pure-checkbox") }}
+                        Remember me
+                    </label>
 
-                <label for="cb" class="pure-checkbox" >
-                    {{ form.remember_me(class_="pure-checkbox") }}
-                    Remember me
+                    {{ form.submit(class_="pure-button pure-button-primary") }}
+                </div>
+
+            </fieldset>
+
+        </form>
+
+        <div class="flexbox-center-container">
+            <a href="#" id="forgot-password-link">
+                Forgot the password?
+            </a>
+        </div>
+    </div>
+
+    <div class="pure-u-sm-1-1 pure-u-md-1-2 auth-form" id="register-form">
+        <form class="pure-form" method="post">
+            <fieldset>
+                <legend>Register a new account:</legend>
+
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="first-name">First Name</label>
+                        <input id="first-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="last-name">Last Name</label>
+                        <input id="last-name" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="email">E-Mail</label>
+                        <input id="email" class="pure-u-23-24" type="email" required>
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="city">City</label>
+                        <input id="city" class="pure-u-23-24" type="text">
+                    </div>
+
+                    <div class="pure-u-1 pure-u-md-1-3">
+                        <label for="state">State</label>
+                        <select id="state" class="pure-input-1-2">
+                            <option>AL</option>
+                            <option>CA</option>
+                            <option>IL</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="terms" class="pure-checkbox">
+                    <input id="terms" type="checkbox"> I've read the terms and conditions
                 </label>
 
-                {{ form.submit(class_="pure-button pure-button-primary") }}
-            </div>
-        </fieldset>
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
 
-    </form>
 </div>
 
-<div class="flexbox-center-container">
-    <a href="#" id="forgot-password-link">
-        Forgot the password?
-    </a>
-</div>
 
 {% include 'base/footer.html' %}
 {% endblock %}

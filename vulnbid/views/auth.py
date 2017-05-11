@@ -1,5 +1,3 @@
-from datetime import date
-
 from flask import render_template, redirect, url_for
 from flask_login import login_user, logout_user, current_user, login_required
 
@@ -27,7 +25,6 @@ def login():
         if user and user.password == hash_password(password):
             login_user(user, remember=remember_me)
             return redirect(url_for('portal'))
-
 
     return render_template(
         'auth/login.html',
